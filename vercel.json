@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd data-journey && npm install && npm run build",
+  "outputDirectory": "data-journey/.next",
+  "installCommand": "cd data-journey && npm install",
+  "framework": "nextjs",
+  "rootDirectory": "data-journey"
+}
