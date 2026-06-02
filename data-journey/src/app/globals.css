@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Theme System variables mapped to Tailwind */
+  --color-panel-bg: var(--theme-panel-bg);
+  --color-panel-border: var(--theme-panel-border);
+  --color-page-bg: var(--theme-page-bg);
+  --color-text-main: var(--theme-text-main);
+  --color-text-muted: var(--theme-text-muted);
+  --color-sub-bg: var(--theme-sub-bg);
+}
+
+:root {
+  --background: #020617; /* Default slate-950 for Engineer mode */
+  --foreground: #f8fafc;
+  
+  /* Engineer Mode (Dark/Hacker Theme) */
+  --theme-panel-bg: #1e293b; /* slate-800 */
+  --theme-panel-border: #334155; /* slate-700 */
+  --theme-page-bg: #020617; /* slate-950 */
+  --theme-text-main: #ffffff; 
+  --theme-text-muted: #94a3b8; /* slate-400 */
+  --theme-sub-bg: #0f172a; /* slate-900 */
+}
+
+/* Aesthetic Kawaii ELI5 Theme (Pastel Cream, Pink, Blue, Purple) */
+.eli5-theme {
+  font-family: 'Fredoka', 'Quicksand', sans-serif;
+  --theme-panel-bg: #ffffff; 
+  --theme-panel-border: #f8b4b4; /* Soft pinkish border as default fallback */
+  --theme-page-bg: #fffbf4; /* Soft cream background */
+  --theme-text-main: #564c70; /* Deep muted purple */
+  --theme-text-muted: #948aa8; /* Lighter muted purple */
+  --theme-sub-bg: #fff2f2; /* Soft pink fallback */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--theme-page-bg);
+  color: var(--theme-text-main);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
